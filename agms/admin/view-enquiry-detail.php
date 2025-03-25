@@ -35,15 +35,14 @@ if (strlen($_SESSION['agmsaid']) == 0) {
             try {
                 // SMTP Configuration
                 $mail->isSMTP();
-                $mail->Host = 'smtp.office365.com'; // Outlook SMTP server
+                $mail->Host = 'smtp.gmail.com'; // Change for Outlook or other providers
                 $mail->SMTPAuth = true;
-                $mail->Username = 'project.agsm@outlook.com'; // Your Outlook email
-                $mail->Password = 'Summerproject'; // App password or email password
-                $mail->SMTPSecure = 'tls';
+                $mail->Username = 'sajanshr10224@gmail.com'; // Your SMTP email
+                $mail->Password = 'fsxh vjkp shis hvxs';   // App Password (Not your normal password)
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
-            
                 // Email Content
-                $mail->setFrom('project.agsm@outlook.com', 'Art Gallery Admin');
+                $mail->setFrom('sajanshr10224@gmail.com', 'Sajan Shrestha');
                 $mail->addAddress($row['Email']); // Recipient's email
                 $mail->Subject = "Enquiry Response - " . $row['EnquiryNumber'];
                 $mail->Body = "Dear " . $row['FullName'] . ",\n\n"
