@@ -192,19 +192,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($responseArray['payment_url']
 }
 ?>
 <style>
-    body {
-        height: 300vh;
-        width: 300vw;
-        background-color: #f6f4f9;
-      }
-      .container {
-        width: 100vw;
-        height: 100vh;
-        display: flex; /* Default Axis is X*/
-        justify-content: center; /* Main Axis */
-        align-items: center; /* Cross Axis */
-      }
-      .indicator {
-        width: 50vw;
-      }
+body {
+    height: 300vh;
+    width: 300vw;
+    background-color: #f6f4f9;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* Default Axis is X*/
+    justify-content: center;
+    /* Main Axis */
+    align-items: center;
+    /* Cross Axis */
+}
+
+.indicator {
+    width: 50vw;
+}
 </style>
