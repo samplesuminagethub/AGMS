@@ -38,19 +38,22 @@ if (isset($_POST['send'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>SMTP Mail Sender</title>
 </head>
+
 <body>
     <h2>Send Email via SMTP</h2>
     <form method="post">
         <label>Receiver Email:</label><br>
         <input type="email" name="email" required><br><br>
-        
+
         <label>Message:</label><br>
         <textarea name="message" required></textarea><br><br>
 
         <button type="submit" name="send">Send Email</button>
     </form>
 </body>
+
 </html>
