@@ -308,5 +308,33 @@ while ($row=mysqli_fetch_array($ret)) {
       <!--bootstrap working-->
       <script src="js/bootstrap.min.js"></script>
       <!-- //bootstrap working-->
+      <script>
+  window.onload = function() {
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+    const username = urlParams.get('username');
+    
+    // Display alerts based on payment status
+    if (status === 'success') {
+      alertify.success('Thank you ' + username + ' for the purchase!');
+    } else if (status === 'canceled') {
+      alertify.error('Payment was canceled. Please try again.');
+    } else if (status === 'pending') {
+      alertify.warning('Payment is still pending. Please check back later.');
+    } else if (status === 'expired') {
+      alertify.error('Payment link has expired.');
+    } else if (status === 'refunded') {
+      alertify.error('Payment was refunded.');
+    } else {
+      alertify.error('Unknown payment status. Please contact support.');
+    }
+  }
+</script>
+
+<!-- Include Alertify.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
    </body>
 </html>
